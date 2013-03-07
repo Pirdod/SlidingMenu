@@ -959,19 +959,19 @@ public class SlidingMenu extends RelativeLayout {
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public void manageLayers(float percentOpen) {
-		if (Build.VERSION.SDK_INT < 11) return;
-
-		boolean layer = percentOpen > 0.0f && percentOpen < 1.0f;
-		final int layerType = layer ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE;
-
-		if (layerType != getContent().getLayerType()) {
-			mHandler.post(new Runnable() {
-				public void run() {
-					getContent().setLayerType(layerType, null);
-					mViewBehind.setChildLayerType(layerType);
-				}
-			});
-		}
+//		if (Build.VERSION.SDK_INT < 11) return;
+//
+//		boolean layer = percentOpen > 0.0f && percentOpen < 1.0f;
+//		final int layerType = layer ? View.LAYER_TYPE_HARDWARE : View.LAYER_TYPE_NONE;
+//
+//		if (layerType != getContent().getLayerType()) {
+//			mHandler.post(new Runnable() {
+//				public void run() {
+//					getContent().setLayerType(layerType, null);
+//					mViewBehind.setChildLayerType(layerType);
+//				}
+//			});
+//		}
 	}
 
 }
